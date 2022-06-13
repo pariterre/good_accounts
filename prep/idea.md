@@ -1,5 +1,6 @@
 # Nomenclature
-- Fellow 
+- Fellow : all the persons added to the party
+- 
 
 
 
@@ -7,6 +8,7 @@
 ## Log screen
 
 ## Main screen
+- Add fello
 
 ## Add event screen
 - Checkbox users 

@@ -1,3 +1,12 @@
 {
-    "helloWorld": "Bonjour le monde!"
+    "goodAccountsMakeGoodFriends": "Les bons comptes font les bons amis!",
+    "summary": "Résumé",
+    "transactions": "Transactions",
+    "haveMadeXTransactions": "{amount} transactions",
+    "dollarAmount": "{amount}$",
+    "colon": " :",
+    "balance": "Solde",
+    "amountDue": "Doit",
+    "amountToReceive": "Reçoit",
+    "burrowedTo": "A prêté à"
 }

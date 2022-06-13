@@ -1,6 +1,28 @@
 {
-    "helloWorld": "Hello World!",
-    "@helloWorld": {
-      "description": "The conventional newborn programmer greeting"
-    }
+    "goodAccountsMakeGoodFriends": "Good accounts make good friends!",
+    "summary": "Summary",
+    "transactions": "Transactions",
+    "dollarAmount": "${amount}",
+    "@dollarAmount": {
+        "placeholders": {
+            "amount": {
+                "type": "String",
+                "example": "100.00"
+            }
+        }
+    },
+    "haveMadeXTransactions": "{amount} transactions",
+    "@haveMadeXTransactions": {
+        "placeholders": {
+            "amount": {
+                "type": "String",
+                "example": "2"
+            }
+        }
+    },
+    "colon": ":",
+    "balance": "Balance",
+    "amountDue": "Give",
+    "amountToReceive": "Get",
+    "burrowedTo": "Burrowed to"
 }
