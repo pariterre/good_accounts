@@ -18,7 +18,7 @@ class AmountSummary extends StatelessWidget {
           child: Center(
             child: Text(
               AppLocalizations.of(context)!.summary,
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
         ),

@@ -17,7 +17,7 @@ class TransactionListTile extends StatelessWidget {
         children: [
           Text(
             transaction.from.fullName,
-            style: const TextStyle(fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ],
       ),
@@ -29,7 +29,7 @@ class TransactionListTile extends StatelessWidget {
           children: [
             Text(
               text.dollarAmount((transaction.amount / 100).toStringAsFixed(2)),
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           ],
         ),

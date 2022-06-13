@@ -24,10 +24,16 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => transactions),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Good accounts make good friends',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
+            primarySwatch: Colors.indigo,
+            fontFamily: 'Akrobat',
+            textTheme: const TextTheme(
+              titleLarge: TextStyle(fontWeight: FontWeight.bold),
+              titleMedium: TextStyle(fontWeight: FontWeight.bold),
+              titleSmall: TextStyle(fontWeight: FontWeight.bold),
+              bodyMedium: TextStyle(fontWeight: FontWeight.bold),
+            )),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         home: const SummaryScreen(),

@@ -22,7 +22,7 @@ class AmountListTile extends StatelessWidget {
       leading: CircleAvatar(backgroundImage: NetworkImage(member.avatarUrl)),
       title: Text(
         member.fullName,
-        style: const TextStyle(fontWeight: FontWeight.bold),
+        style: Theme.of(context).textTheme.titleMedium,
       ),
       subtitle: Text(text.haveMadeXTransactions(numberTransactions.toString())),
       trailing: SizedBox(
@@ -31,15 +31,18 @@ class AmountListTile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text('${text.balance}${text.colon}',
-                style: const TextStyle(fontSize: 15)),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyMedium!
+                    .copyWith(fontWeight: FontWeight.normal)),
             Text(
               balance < 0
                   ? '(${text.dollarAmount(amountWithCent)})'
                   : text.dollarAmount(amountWithCent),
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15,
-                  color: balance < 0 ? Colors.red : Colors.black),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyMedium!
+                  .copyWith(color: balance < 0 ? Colors.red : Colors.black),
             ),
           ],
         ),

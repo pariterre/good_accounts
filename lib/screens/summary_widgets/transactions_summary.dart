@@ -18,7 +18,7 @@ class TransactionsSummary extends StatelessWidget {
           child: Center(
             child: Text(
               AppLocalizations.of(context)!.transactions,
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
         ),
