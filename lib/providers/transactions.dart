@@ -40,11 +40,11 @@ class Transactions with ChangeNotifier {
 
   void initializeWithDummy(Party party) {
     _items.add(createDummyTransaction(party, fromIndex: 0));
-    // _items.add(createDummyTransaction(party));
-    // _items.add(createDummyTransaction(party));
-    // _items.add(createDummyTransaction(party));
-    // _items.add(createDummyTransaction(party));
-    // _items.add(createDummyTransaction(party));
+    _items.add(createDummyTransaction(party));
+    _items.add(createDummyTransaction(party));
+    _items.add(createDummyTransaction(party));
+    _items.add(createDummyTransaction(party));
+    _items.add(createDummyTransaction(party));
   }
 
   void add(Transaction transaction) {

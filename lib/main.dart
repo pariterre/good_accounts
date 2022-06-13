@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final party = Party()..initializeWithDummy();
     final transactions = Transactions()..initializeWithDummy(party);
+    final colorScheme = ColorScheme.fromSwatch(
+        primarySwatch: Colors.green, accentColor: Colors.pink[400]);
 
     return MultiProvider(
       providers: [
@@ -26,13 +28,14 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Good accounts make good friends',
         theme: ThemeData(
-            primarySwatch: Colors.indigo,
+            colorScheme: colorScheme,
             fontFamily: 'Akrobat',
-            textTheme: const TextTheme(
-              titleLarge: TextStyle(fontWeight: FontWeight.bold),
-              titleMedium: TextStyle(fontWeight: FontWeight.bold),
-              titleSmall: TextStyle(fontWeight: FontWeight.bold),
-              bodyMedium: TextStyle(fontWeight: FontWeight.bold),
+            textTheme: TextTheme(
+              titleLarge: TextStyle(
+                  fontWeight: FontWeight.bold, color: colorScheme.onSecondary),
+              titleMedium: const TextStyle(fontWeight: FontWeight.bold),
+              titleSmall: const TextStyle(fontWeight: FontWeight.bold),
+              bodyMedium: const TextStyle(fontWeight: FontWeight.bold),
             )),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,

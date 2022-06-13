@@ -24,13 +24,17 @@ class AmountListTile extends StatelessWidget {
         member.fullName,
         style: Theme.of(context).textTheme.titleMedium,
       ),
-      subtitle: Text(text.haveMadeXTransactions(numberTransactions.toString())),
+      subtitle: Text(numberTransactions == 0
+          ? text.haveMade0Transaction
+          : numberTransactions == 1
+              ? text.haveMade1Transaction
+              : text.haveMadeXTransactions(numberTransactions.toString())),
       trailing: SizedBox(
         width: 140,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Text('${text.balance}${text.colon}',
+            Text('${text.balance}${text.colon} ',
                 style: Theme.of(context)
                     .textTheme
                     .bodyMedium!

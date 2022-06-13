@@ -11,6 +11,8 @@
             }
         }
     },
+    "haveMade0Transaction": "No transaction",
+    "haveMade1Transaction": "1 Transaction",
     "haveMadeXTransactions": "{amount} transactions",
     "@haveMadeXTransactions": {
         "placeholders": {

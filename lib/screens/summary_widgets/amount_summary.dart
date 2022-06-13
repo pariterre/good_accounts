@@ -13,16 +13,22 @@ class AmountSummary extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
+        Container(
           padding: const EdgeInsets.only(top: 12.0),
           child: Center(
-            child: Text(
-              AppLocalizations.of(context)!.summary,
-              style: Theme.of(context).textTheme.titleLarge,
+            child: Container(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 10, horizontal: 100),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Theme.of(context).colorScheme.secondary),
+              child: Text(
+                AppLocalizations.of(context)!.summary,
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
             ),
           ),
         ),
-        const Divider(thickness: 1, color: Colors.black),
         SingleChildScrollView(
           child: SizedBox(
             height: 200,
@@ -39,7 +45,7 @@ class AmountSummary extends StatelessWidget {
             }),
           ),
         ),
-        const Divider(thickness: 1, color: Colors.black),
+        const SizedBox(height: 25),
       ],
     );
   }
